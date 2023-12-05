@@ -1,4 +1,4 @@
-package poker.sevice;
+package poker.service;
 
 import lombok.RequiredArgsConstructor;
 import poker.model.Layout;

@@ -1,4 +1,4 @@
-package poker.sevice;
+package poker.service;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

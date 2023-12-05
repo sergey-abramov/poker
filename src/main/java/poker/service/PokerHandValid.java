@@ -1,4 +1,4 @@
-package poker.sevice;
+package poker.service;
 
 import poker.model.PokerHand;
 
