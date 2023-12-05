@@ -15,12 +15,14 @@ class PokerHandServiceTest {
 
     @BeforeAll
     public static void init() {
-        PokerHandGradeService gradeService = new PokerHandGradeService();
-        service = new PokerHandService(gradeService);
+        Grade gradeService = new Grade();
+        Parser parser = new Parser();
+        HandRankAnalyze rankAnalyze = new HandRankAnalyze();
+        service = new PokerHandService(gradeService, rankAnalyze, parser);
     }
 
     @Test
-    void sorted() {
+    void sortedThenTwoPokerHand() {
         PokerHand pair = new PokerHand("KS 2H 4C KD TD");
         PokerHand three = new PokerHand("KS KH 4C KD TD");
         List<PokerHand> handList = new ArrayList<>();
@@ -30,7 +32,7 @@ class PokerHandServiceTest {
     }
 
     @Test
-    void sorted2() {
+    void sortedThenFourPokerHand() {
         PokerHand pair = new PokerHand("KS 2H 4C KD TD");
         PokerHand three = new PokerHand("KS KH 4C KD TD");
         PokerHand fullHouse = new PokerHand("KS 2H 2C KD KC");
